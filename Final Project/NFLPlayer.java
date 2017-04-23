@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author jacobbushdiecker
  */
-public class Player {
+public class NFLPlayer {
     //Declare private variables
     private String name;
     private int age;
@@ -23,7 +23,7 @@ public class Player {
     private int count = 0;
     
     //No arg constructor for intial values of private variables
-    Player(){
+    NFLPlayer(){
         this.name = "";
         this.age = 0;
         this.number = 0;
@@ -34,7 +34,7 @@ public class Player {
     }
     
     //Sets the values for private variables
-    Player(String name, int age, int number, String team, float height, 
+    NFLPlayer(String name, int age, int number, String team, float height, 
             float weight, String category){
         this.name = name;
         this.age = age;
@@ -116,7 +116,7 @@ public class Player {
     }
 }
 
-class Test{
+class Test2{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         
