@@ -12,7 +12,7 @@ import java.util.Random;
  * @author jacobbushdiecker
 */
 
-public class OffensivePlayer extends NFLPlayer{
+public class OffensivePlayer extends NFLPlayer implements Celebrator{
 	
 	private double passing;
 	private double rec;
@@ -37,7 +37,22 @@ public class OffensivePlayer extends NFLPlayer{
 		this.setTd(td);
 		this.setPosition(position);
 	}
-
+        
+        @Override
+        public String celebrate(){
+            int r = new Random().nextInt(4);
+            String message = "";
+            switch(r){
+                case 0: message = "dances to celebrate his draft"; break;
+                case 1: message = "jumps for joy to celebrate his draft"; break;
+                case 2: message = "spins in a circle to celebrate his draft"; break;
+                case 3: message = "does a back flip to celebrate his draft"; break;
+                case 4: message = "smiles to celebrate his draft"; break;
+            }
+            return message;
+        }
+        
+        
 	//Get Passing
 	public double getPassing(){
             return passing;

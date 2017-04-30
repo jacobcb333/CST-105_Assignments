@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author jacobbushdiecker
  */
-public class NFLPlayer {
+public abstract class NFLPlayer implements Celebrator{
     //Declare private variables
     private String name;
     private int age;
@@ -114,49 +114,18 @@ public class NFLPlayer {
     public void setCategory(String category){
         this.category = category;
     }
-}
-
-class Test2{
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        
-        //Makes reference to player manager class
-        PlayerManager pm = new PlayerManager();
-       
-        //Array of objects of players
-        Player[] players = {pm.player1, pm.player2, pm.player3, pm.player4, 
-            pm.player5, pm.player6, pm.player7, pm.player8, pm.player9, pm.player10, 
-            pm.player11, pm.player12, pm.player13, pm.player14, pm.player15, pm.player16, 
-            pm.player17, pm.player18, pm.player19, pm.player20};
-        
-        //Uses the getters to get the players name, age, number, team, height,
-        //weight, and category
-        for(int i = 0; i < players.length; i++){
-            System.out.println(players[i].getName()+ " Age: " + players[i].getAge() + " Number: " +
-                    players[i].getNumber() + " Team: " + players[i].getTeam() + " Height: " +
-                    players[i].getHeight() + " Weight: " + players[i].getWeight() + " Category: " +
-                    players[i].getCategory());
-        }
-        
-        boolean x = true;
-        
-        while(x){
-            System.out.println("Which player would you like to add to your draft?");
-            int choice = input.nextInt();
-
-            pm.setDraftPick(choice);
-            List <Player> test = new ArrayList<Player>();
-            test = pm.getDraftPick();
-
-            for(int i = 0; i < test.size(); i++){
-                System.out.println(test.get(i).getName());
+    
+    @Override
+        public String celebrate(){
+            int r = new Random().nextInt(4);
+            String message = "";
+            switch(r){
+                case 0: message = "dances to celebrate his draft"; break;
+                case 1: message = "jumps for joy to celebrate his draft"; break;
+                case 2: message = "spins in a circle to celebrate his draft"; break;
+                case 3: message = "does a back flip to celebrate his draft"; break;
+                case 4: message = "smiles to celebrate his draft"; break;
             }
-            
-            System.out.println("Enter x to exit, or any other key to continue");
-            char exitApp = input.next().charAt(0);
-            if(exitApp == 'x' || exitApp == 'X'){
-                x = false;
-            }
+            return getName() + message;
         }
-    }
 }

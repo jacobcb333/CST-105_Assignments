@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author jacobbushdiecker
  */
-public class DefensivePlayer extends NFLPlayer{
+public class DefensivePlayer extends NFLPlayer implements Celebrator{
 	private double tackles;
 	private double ast;
 	private double comb;
@@ -31,6 +31,20 @@ public class DefensivePlayer extends NFLPlayer{
 		this.setInter(inter);
 		this.setPosition(position);
 	}
+        
+        @Override
+        public String celebrate(){
+            int r = new Random().nextInt(4);
+            String message = "";
+            switch(r){
+                case 0: message = "dances to celebrate his draft"; break;
+                case 1: message = "jumps for joy to celebrate his draft"; break;
+                case 2: message = "spins in a circle to celebrate his draft"; break;
+                case 3: message = "does a back flip to celebrate his draft"; break;
+                case 4: message = "smiles to celebrate his draft"; break;
+            }
+            return message;
+        }
         
 	//Get tackles
 	public double getTackles(){
