@@ -5,7 +5,7 @@
  */
 package finalproject;
 
-import java.util.*;
+import java.util.Random;
 
 /**
  *
@@ -22,7 +22,7 @@ public class DefensivePlayer extends NFLPlayer implements Celebrator{
         //DefensivePlayer constructor
 	DefensivePlayer(String name, int age, int number, String team, 
             float height, float weight, String category, double tackles,
-            double ast, double comb, double sacks, double inter, String position){
+            double sacks, double inter, String position){
                 super(name, age, number, team, height, weight, "def");
 		this.setTackles(tackles);
 		this.setAst(ast);
@@ -37,11 +37,11 @@ public class DefensivePlayer extends NFLPlayer implements Celebrator{
             int r = new Random().nextInt(4);
             String message = "";
             switch(r){
-                case 0: message = "dances to celebrate his draft"; break;
-                case 1: message = "jumps for joy to celebrate his draft"; break;
-                case 2: message = "spins in a circle to celebrate his draft"; break;
-                case 3: message = "does a back flip to celebrate his draft"; break;
-                case 4: message = "smiles to celebrate his draft"; break;
+                case 0: message = " dances to celebrate his draft"; break;
+                case 1: message = " jumps for joy to celebrate his draft"; break;
+                case 2: message = " spins in a circle to celebrate his draft"; break;
+                case 3: message = " does a back flip to celebrate his draft"; break;
+                case 4: message = " smiles to celebrate his draft"; break;
             }
             return message;
         }

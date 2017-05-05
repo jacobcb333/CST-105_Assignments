@@ -19,6 +19,7 @@ public abstract class NFLPlayer implements Celebrator{
     private String team;
     private float height;
     private float weight;
+    private String status = "available";
     private String category;
     private int count = 0;
     
@@ -105,6 +106,14 @@ public abstract class NFLPlayer implements Celebrator{
         this.weight = weight;
     }  
     
+    public String getStatus(){
+        return status;
+    }
+    
+    public void setStatus(String status){
+        this.status = status;
+    }
+    
     //getter for category
     public String getCategory(){
         return category;
@@ -120,11 +129,11 @@ public abstract class NFLPlayer implements Celebrator{
             int r = new Random().nextInt(4);
             String message = "";
             switch(r){
-                case 0: message = "dances to celebrate his draft"; break;
-                case 1: message = "jumps for joy to celebrate his draft"; break;
-                case 2: message = "spins in a circle to celebrate his draft"; break;
-                case 3: message = "does a back flip to celebrate his draft"; break;
-                case 4: message = "smiles to celebrate his draft"; break;
+                case 0: message = " dances to celebrate his draft"; break;
+                case 1: message = " jumps for joy to celebrate his draft"; break;
+                case 2: message = " spins in a circle to celebrate his draft"; break;
+                case 3: message = " does a back flip to celebrate his draft"; break;
+                case 4: message = " smiles to celebrate his draft"; break;
             }
             return getName() + message;
         }

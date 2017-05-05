@@ -15,6 +15,6 @@ Features:
 	
 Design:
 	-The program will use the following classes:
-		*Player - This will contain private variables, to avoid modification of variables outside the instance. Will contain a no-arg constructor that will create a default case for everything. Contains a Constructor that will take an argument for String name, int age, int number, String team, float height, float weight, and String status. Finally will contain getters and setters for the private variables.
+		*Player - This will contain private variables, to avoid modification of variables outside the instance. Will contain a no-arg constructor 		that will create a default case for everything. Contains a Constructor that will take an argument for String name, int age, int number, 		String team, float height, float weight, and String status. Finally will contain getters and setters for the private variables.
 		
-		*PlayerManager - This will contain the objects that call to the Player class. These objects contain all the players information. It will also contain an ArrayList that stores an instance of the objects from the class Player. This arrayList will expand in size for each player that a user adds or removes from their draft. It will user a getter and setter to call to the arrayList of objects.
+		*PlayerManager - This will contain the objects that call to the Player class. These objects contain all the players information. It will 		also contain an ArrayList that stores an instance of the objects from the class Player. This arrayList will expand in size for each player 		that a user adds or removes from their draft. It will user a getter and setter to call to the arrayList of objects.
